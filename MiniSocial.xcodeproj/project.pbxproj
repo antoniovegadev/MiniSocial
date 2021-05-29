@@ -13,6 +13,7 @@
 		E224DFC32661F76900FBB9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E224DFC22661F76900FBB9B1 /* Preview Assets.xcassets */; };
 		E224DFCC2661F7D200FBB9B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224DFCB2661F7D200FBB9B1 /* User.swift */; };
 		E224DFCF2661F8C800FBB9B1 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224DFCE2661F8C800FBB9B1 /* Friend.swift */; };
+		E25027872662A454008C7526 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25027862662A454008C7526 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E224DFC42661F76900FBB9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E224DFCB2661F7D200FBB9B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E224DFCE2661F8C800FBB9B1 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E25027862662A454008C7526 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				E224DFBD2661F76800FBB9B1 /* ContentView.swift */,
+				E25027862662A454008C7526 /* UserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				E224DFBE2661F76800FBB9B1 /* ContentView.swift in Sources */,
 				E224DFBC2661F76800FBB9B1 /* MiniSocialApp.swift in Sources */,
+				E25027872662A454008C7526 /* UserView.swift in Sources */,
 				E224DFCC2661F7D200FBB9B1 /* User.swift in Sources */,
 				E224DFCF2661F8C800FBB9B1 /* Friend.swift in Sources */,
 			);

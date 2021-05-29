@@ -21,8 +21,15 @@ struct User : Decodable {
     let tags: [String]
     let friends: [Friend]
     
-    var statusImage: some View {
+    var statusImageFixed: some View {
         Image(systemName: isActive ? "largecircle.fill.circle" : "moon.circle.fill")
             .foregroundColor(isActive ? .green : .purple)
+    }
+    
+    var statusImageDynamic: some View {
+        Image(systemName: isActive ? "largecircle.fill.circle" : "moon.circle.fill")
+            .resizable()
+            .foregroundColor(isActive ? .green : .purple)
+            .background(Circle().fill(Color.black))
     }
 }

@@ -13,15 +13,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(users, id: \.id) { user in
-                VStack(alignment: .leading) {
-                    Text(user.name)
-                        .font(.headline)
-                    Text(user.company)
+                NavigationLink(destination: UserView(user: user, users: users)) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(user.name)
+                                .font(.headline)
+                            Text(user.company)
+                        }
+                        
+                        Spacer()
+                        
+                        user.statusImageFixed
+                    }
                 }
-                
-                Spacer()
-                
-                user.statusImage
             }
             .navigationTitle("MiniSocial")
         }
