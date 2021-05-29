@@ -22,7 +22,7 @@ struct User : Decodable {
     let friends: [Friend]
     
     var statusImage: some View {
-        Image(systemName: isActive ? "circle.fill" : "moon.circle.fill")
+        Image(systemName: isActive ? "largecircle.fill.circle" : "moon.circle.fill")
             .foregroundColor(isActive ? .green : .purple)
     }
 }
