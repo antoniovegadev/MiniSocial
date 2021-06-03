@@ -11,9 +11,14 @@
 		E224DFBE2661F76800FBB9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224DFBD2661F76800FBB9B1 /* ContentView.swift */; };
 		E224DFC02661F76900FBB9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E224DFBF2661F76900FBB9B1 /* Assets.xcassets */; };
 		E224DFC32661F76900FBB9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E224DFC22661F76900FBB9B1 /* Preview Assets.xcassets */; };
-		E224DFCC2661F7D200FBB9B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224DFCB2661F7D200FBB9B1 /* User.swift */; };
-		E224DFCF2661F8C800FBB9B1 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E224DFCE2661F8C800FBB9B1 /* Friend.swift */; };
+		E230B88A26645D850013FE9D /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E230B88826645D850013FE9D /* User+CoreDataClass.swift */; };
+		E230B88B26645D850013FE9D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E230B88926645D850013FE9D /* User+CoreDataProperties.swift */; };
+		E230B8922665C9CD0013FE9D /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E230B8902665C9CD0013FE9D /* Friend+CoreDataClass.swift */; };
+		E230B8932665C9CD0013FE9D /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E230B8912665C9CD0013FE9D /* Friend+CoreDataProperties.swift */; };
 		E25027872662A454008C7526 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25027862662A454008C7526 /* UserView.swift */; };
+		E2F93378266700230079A3CB /* InLineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F93377266700230079A3CB /* InLineTextView.swift */; };
+		E2FCA57A26633CCB0096D240 /* MiniSocial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA57826633CCB0096D240 /* MiniSocial.xcdatamodeld */; };
+		E2FCA57C26633E930096D240 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA57B26633E930096D240 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +28,14 @@
 		E224DFBF2661F76900FBB9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E224DFC22661F76900FBB9B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E224DFC42661F76900FBB9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E224DFCB2661F7D200FBB9B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E224DFCE2661F8C800FBB9B1 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E230B88826645D850013FE9D /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E230B88926645D850013FE9D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		E230B8902665C9CD0013FE9D /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		E230B8912665C9CD0013FE9D /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E25027862662A454008C7526 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		E2F93377266700230079A3CB /* InLineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InLineTextView.swift; sourceTree = "<group>"; };
+		E2FCA57926633CCB0096D240 /* MiniSocial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiniSocial.xcdatamodel; sourceTree = "<group>"; };
+		E2FCA57B26633E930096D240 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				E224DFBB2661F76800FBB9B1 /* MiniSocialApp.swift */,
+				E2F933762666FC580079A3CB /* Controller */,
 				E224DFCD2661F7D900FBB9B1 /* Model */,
 				E224DFCA2661F78A00FBB9B1 /* View */,
 				E224DFBF2661F76900FBB9B1 /* Assets.xcassets */,
@@ -81,6 +92,7 @@
 			children = (
 				E224DFBD2661F76800FBB9B1 /* ContentView.swift */,
 				E25027862662A454008C7526 /* UserView.swift */,
+				E2F93377266700230079A3CB /* InLineTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,10 +100,21 @@
 		E224DFCD2661F7D900FBB9B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E224DFCB2661F7D200FBB9B1 /* User.swift */,
-				E224DFCE2661F8C800FBB9B1 /* Friend.swift */,
+				E230B8902665C9CD0013FE9D /* Friend+CoreDataClass.swift */,
+				E230B8912665C9CD0013FE9D /* Friend+CoreDataProperties.swift */,
+				E230B88826645D850013FE9D /* User+CoreDataClass.swift */,
+				E230B88926645D850013FE9D /* User+CoreDataProperties.swift */,
+				E2FCA57826633CCB0096D240 /* MiniSocial.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E2F933762666FC580079A3CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2FCA57B26633E930096D240 /* PersistenceController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +187,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E224DFBE2661F76800FBB9B1 /* ContentView.swift in Sources */,
+				E230B8922665C9CD0013FE9D /* Friend+CoreDataClass.swift in Sources */,
+				E230B8932665C9CD0013FE9D /* Friend+CoreDataProperties.swift in Sources */,
+				E2FCA57C26633E930096D240 /* PersistenceController.swift in Sources */,
+				E2FCA57A26633CCB0096D240 /* MiniSocial.xcdatamodeld in Sources */,
 				E224DFBC2661F76800FBB9B1 /* MiniSocialApp.swift in Sources */,
+				E2F93378266700230079A3CB /* InLineTextView.swift in Sources */,
 				E25027872662A454008C7526 /* UserView.swift in Sources */,
-				E224DFCC2661F7D200FBB9B1 /* User.swift in Sources */,
-				E224DFCF2661F8C800FBB9B1 /* Friend.swift in Sources */,
+				E230B88A26645D850013FE9D /* User+CoreDataClass.swift in Sources */,
+				E230B88B26645D850013FE9D /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2FCA57826633CCB0096D240 /* MiniSocial.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2FCA57926633CCB0096D240 /* MiniSocial.xcdatamodel */,
+			);
+			currentVersion = E2FCA57926633CCB0096D240 /* MiniSocial.xcdatamodel */;
+			path = MiniSocial.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E224DFB02661F76800FBB9B1 /* Project object */;
 }

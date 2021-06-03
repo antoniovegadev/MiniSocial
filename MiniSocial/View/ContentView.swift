@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users = [User]()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: User.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var users: FetchedResults<User>
 
     var body: some View {
         NavigationView {
-            List(users, id: \.id) { user in
-                NavigationLink(destination: UserView(user: user, users: users)) {
+            List(users) { user in
+                NavigationLink(destination: UserView(userId: user.id)) {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(user.name)
@@ -33,18 +34,24 @@ struct ContentView: View {
     }
     
     func loadData() {
+        if(!users.isEmpty) {
+            return
+        }
+        
+        let decoder = JSONDecoder()
+        
+        decoder.userInfo[CodingUserInfoKey.managedObjectContext!] = moc
+        decoder.dateDecodingStrategy = .iso8601
+        
         let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let safeData = data {
-                if let decoded = try? JSONDecoder().decode([User].self, from: safeData) {
-                    DispatchQueue.main.async {
-                        users = decoded
-                    }
-                    return
-                }
-            }
             
+            if let safeData = data {
+                _ = try? decoder.decode([User].self, from: safeData)
+                return
+            }
+
             print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
     }
